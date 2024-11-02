@@ -31,7 +31,7 @@ createdAt: 2024-11-02T14:28:44.687Z
 
 ```bash
 pip install pyautogui psutil opencv-python
-
+```
 欢迎Issue
 开发者:q1uf3ng Bytegeek
 微信公众号![qrcode_for_gh_45a25e2baa91_430](https://github.com/user-attachments/assets/f0e84ee1-7c6b-4302-b450-db3b0369bdfa)
