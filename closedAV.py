@@ -93,7 +93,7 @@ if chickd=="只有火绒出现":
     print("1")
     if current_version == "Windows 7":
             
-        # 先点击 win10black.png
+        
         win10black = image_paths['win7']
         print(f'Checking image path: {win10black}')
         while True:
@@ -114,7 +114,7 @@ if chickd=="只有火绒出现":
                 time.sleep(1)
         time.sleep(1)
         # 再点击 hh.png 并进行右键点击
-        hh_image_path = image_paths['hh']
+        hh_image_path = image_paths['hr']
         print(f'Checking image path: {hh_image_path}')
         while True:
             try:
@@ -135,7 +135,7 @@ if chickd=="只有火绒出现":
         time.sleep(1)
 
         # 点击 exit.png
-        exit_image_path = image_paths['exit']
+        exit_image_path = image_paths['hr_exit']
         print(f'Checking image path: {exit_image_path}')
         while True:
             try:
@@ -155,7 +155,7 @@ if chickd=="只有火绒出现":
                 time.sleep(1)
         time.sleep(1)
         # 最后点击 eexit.png
-        eexit_image_path = image_paths['eexit']
+        eexit_image_path = image_paths['hr_eexit']
         print(f'Checking image path: {eexit_image_path}')
         while True:
             try:
@@ -173,8 +173,6 @@ if chickd=="只有火绒出现":
             except Exception as e:
                 print(f'An error occurred: {e}')
                 time.sleep(1)
-
-
 
 
     elif current_version == "Windows 10":
@@ -200,7 +198,7 @@ if chickd=="只有火绒出现":
                 time.sleep(1)
         time.sleep(1)
         # 再点击 hh.png 并进行右键点击
-        hh_image_path = image_paths['hh']
+        hh_image_path = image_paths['hr']
         print(f'Checking image path: {hh_image_path}')
         while True:
             try:
@@ -221,7 +219,7 @@ if chickd=="只有火绒出现":
         time.sleep(1)
 
         # 点击 exit.png
-        exit_image_path = image_paths['exit']
+        exit_image_path = image_paths['hr_exit']
         print(f'Checking image path: {exit_image_path}')
         while True:
             try:
@@ -241,7 +239,7 @@ if chickd=="只有火绒出现":
                 time.sleep(1)
         time.sleep(1)
         # 最后点击 eexit.png
-        eexit_image_path = image_paths['eexit']
+        eexit_image_path = image_paths['hr_eexit']
         print(f'Checking image path: {eexit_image_path}')
         while True:
             try:
@@ -259,9 +257,6 @@ if chickd=="只有火绒出现":
             except Exception as e:
                 print(f'An error occurred: {e}')
                 time.sleep(1)
-
-
-
 
 
     elif current_version == "Windows Server 2012":
@@ -287,7 +282,7 @@ if chickd=="只有火绒出现":
                 time.sleep(1)
         time.sleep(1)
         # 再点击 hh.png 并进行右键点击
-        hh_image_path = image_paths['hh']
+        hh_image_path = image_paths['hr']
         print(f'Checking image path: {hh_image_path}')
         while True:
             try:
@@ -308,7 +303,7 @@ if chickd=="只有火绒出现":
         time.sleep(1)
 
         # 点击 exit.png
-        exit_image_path = image_paths['exit']
+        exit_image_path = image_paths['hr_exit']
         print(f'Checking image path: {exit_image_path}')
         while True:
             try:
@@ -328,7 +323,7 @@ if chickd=="只有火绒出现":
                 time.sleep(1)
         time.sleep(1)
         # 最后点击 eexit.png
-        eexit_image_path = image_paths['eexit']
+        eexit_image_path = image_paths['hr_eexit']
         print(f'Checking image path: {eexit_image_path}')
         while True:
             try:
@@ -371,7 +366,7 @@ if chickd=="只有火绒出现":
                 time.sleep(1)
         time.sleep(1)
         # 再点击 hh.png 并进行右键点击
-        hh_image_path = image_paths['hh']
+        hh_image_path = image_paths['hr']
         print(f'Checking image path: {hh_image_path}')
         while True:
             try:
@@ -392,7 +387,7 @@ if chickd=="只有火绒出现":
         time.sleep(1)
 
         # 点击 exit.png
-        exit_image_path = image_paths['exit']
+        exit_image_path = image_paths['hr_exit']
         print(f'Checking image path: {exit_image_path}')
         while True:
             try:
@@ -412,7 +407,7 @@ if chickd=="只有火绒出现":
                 time.sleep(1)
         time.sleep(1)
         # 最后点击 eexit.png
-        eexit_image_path = image_paths['eexit']
+        eexit_image_path = image_paths['hr_eexit']
         print(f'Checking image path: {eexit_image_path}')
         while True:
             try:
@@ -432,85 +427,418 @@ if chickd=="只有火绒出现":
                 time.sleep(1)
 
 
-elif  chickd == "只有360出现":
-    
-    # 先点击 win10black.png
-    win10black = image_paths['win10black']
-    print(f'Checking image path: {win10black}')
-    while True:
-        try:
-            position = pg.locateOnScreen(win10black, grayscale=True, confidence=0.9)
-            
-            if position is not None:
-                point = pg.center(position)
-                print(f'Image found at: {point}')
-                pg.click(point)
-                print(f'Clicked on image at: {point}')
-                break
-            else:
-                print(f'Image not found: {win10black}. Retrying...')
-                time.sleep(1)
-        except Exception as e:
-            print(f'An error occurred: {e}')
-            time.sleep(1)
-    time.sleep(1)
-    # 再点击 hh.png 并进行右键点击
-    hh_image_path = image_paths['hh']
-    print(f'Checking image path: {hh_image_path}')
-    while True:
-        try:
-            position = pg.locateOnScreen(hh_image_path, grayscale=True, confidence=0.9)
-            
-            if position is not None:
-                point = pg.center(position)
-                print(f'Image found at: {point}')
-                pg.rightClick(point)
-                print(f'Right-clicked on image at: {point}')
-                break
-            else:
-                print(f'Image not found: {hh_image_path}. Retrying...')
-                time.sleep(1)
-        except Exception as e:
-            print(f'An error occurred: {e}')
-            time.sleep(1)
-    time.sleep(1)
 
-    # 点击 exit.png
-    exit_image_path = image_paths['exit']
-    print(f'Checking image path: {exit_image_path}')
-    while True:
-        try:
-            position = pg.locateOnScreen(exit_image_path, grayscale=True, confidence=0.9)
-            
-            if position is not None:
-                point = pg.center(position)
-                print(f'Image found at: {point}')
-                pg.click(point)
-                print(f'Clicked on image at: {point}')
-                break
-            else:
-                print(f'Image not found: {exit_image_path}. Retrying...')
+
+
+#<--------------------------------------------------------------------------------------------------------->
+elif  chickd == "只有360出现":
+    if current_version =="Windows 7":
+        # 先点击 win10black.png
+        win10black = image_paths['win7']
+        print(f'Checking image path: {win10black}')
+        while True:
+            try:
+                position = pg.locateOnScreen(win10black, grayscale=True, confidence=0.9)
+                
+                if position is not None:
+                    point = pg.center(position)
+                    print(f'Image found at: {point}')
+                    pg.click(point)
+                    print(f'Clicked on image at: {point}')
+                    break
+                else:
+                    print(f'Image not found: {win10black}. Retrying...')
+                    time.sleep(1)
+            except Exception as e:
+                print(f'An error occurred: {e}')
                 time.sleep(1)
-        except Exception as e:
-            print(f'An error occurred: {e}')
-            time.sleep(1)
-    time.sleep(1)
-    # 最后点击 eexit.png
-    eexit_image_path = image_paths['eexit']
-    print(f'Checking image path: {eexit_image_path}')
-    while True:
-        try:
-            position = pg.locateOnScreen(eexit_image_path, grayscale=True, confidence=0.9)
-            
-            if position is not None:
-                point = pg.center(position)
-                print(f'Image found at: {point}')
-                pg.click(point)
-                print(f'Clicked on image at: {point}')
-                break
-            else:
-                print(f'Image not found: {eexit_image_path}. Retrying...')
+        time.sleep(1)
+
+        # 再点击 360_img.png 并进行右键点击
+        hh_image_path = image_paths['hh']
+        print(f'Checking image path: {hh_image_path}')
+        while True:
+            try:
+                position = pg.locateOnScreen(hh_image_path, grayscale=True, confidence=0.9)
+                
+                if position is not None:
+                    point = pg.center(position)
+                    print(f'Image found at: {point}')
+                    pg.rightClick(point)
+                    print(f'Right-clicked on image at: {point}')
+                    break
+                else:
+                    print(f'Image not found: {hh_image_path}. Retrying...')
+                    time.sleep(1)
+            except Exception as e:
+                print(f'An error occurred: {e}')
                 time.sleep(1)
-        except Exception as e:
-            print(f'An error occurred: {e}')
+        time.sleep(1)
+
+        # 点击 360_exit.png
+        exit_image_path = image_paths['exit']
+        print(f'Checking image path: {exit_image_path}')
+        while True:
+            try:
+                position = pg.locateOnScreen(exit_image_path, grayscale=True, confidence=0.9)
+                
+                if position is not None:
+                    point = pg.center(position)
+                    print(f'Image found at: {point}')
+                    pg.click(point)
+                    print(f'Clicked on image at: {point}')
+                    break
+                else:
+                    print(f'Image not found: {exit_image_path}. Retrying...')
+                    time.sleep(1)
+            except Exception as e:
+                print(f'An error occurred: {e}')
+                time.sleep(1)
+        time.sleep(1)
+        # 最后点击 360_exit2.png
+        eexit_image_path = image_paths['eexit']
+        print(f'Checking image path: {eexit_image_path}')
+        while True:
+            try:
+                position = pg.locateOnScreen(eexit_image_path, grayscale=True, confidence=0.9)
+                
+                if position is not None:
+                    point = pg.center(position)
+                    print(f'Image found at: {point}')
+                    pg.click(point)
+                    print(f'Clicked on image at: {point}')
+                    break
+                else:
+                    print(f'Image not found: {eexit_image_path}. Retrying...')
+                    time.sleep(1)
+            except Exception as e:
+                print(f'An error occurred: {e}')
+                time.sleep(1)
+        # 最后点击 360_always_always_exit.png
+        eeexit_image_path = image_paths['eeexit']
+        print(f'Checking image path: {eeexit_image_path}')
+        while True:
+            try:
+                position = pg.locateOnScreen(eeexit_image_path, grayscale=True, confidence=0.9)
+                
+                if position is not None:
+                    point = pg.center(position)
+                    print(f'Image found at: {point}')
+                    pg.click(point)
+                    print(f'Clicked on image at: {point}')
+                    break
+                else:
+                    print(f'Image not found: {eeexit_image_path}. Retrying...')
+                    time.sleep(1)
+            except Exception as e:
+                print(f'An error occurred: {e}')
+                time.sleep(1)
+
+
+    elif current_version =="Windows 10":
+            # 先点击 win10black.png
+            win10black = image_paths['win10black']
+            print(f'Checking image path: {win10black}')
+            while True:
+                try:
+                    position = pg.locateOnScreen(win10black, grayscale=True, confidence=0.9)
+                    
+                    if position is not None:
+                        point = pg.center(position)
+                        print(f'Image found at: {point}')
+                        pg.click(point)
+                        print(f'Clicked on image at: {point}')
+                        break
+                    else:
+                        print(f'Image not found: {win10black}. Retrying...')
+                        time.sleep(1)
+                except Exception as e:
+                    print(f'An error occurred: {e}')
+                    time.sleep(1)
             time.sleep(1)
+
+            # 再点击 360_img.png 并进行右键点击
+            hh_image_path = image_paths['hh']
+            print(f'Checking image path: {hh_image_path}')
+            while True:
+                try:
+                    position = pg.locateOnScreen(hh_image_path, grayscale=True, confidence=0.9)
+                    
+                    if position is not None:
+                        point = pg.center(position)
+                        print(f'Image found at: {point}')
+                        pg.rightClick(point)
+                        print(f'Right-clicked on image at: {point}')
+                        break
+                    else:
+                        print(f'Image not found: {hh_image_path}. Retrying...')
+                        time.sleep(1)
+                except Exception as e:
+                    print(f'An error occurred: {e}')
+                    time.sleep(1)
+            time.sleep(1)
+
+            # 点击 360_exit.png
+            exit_image_path = image_paths['exit']
+            print(f'Checking image path: {exit_image_path}')
+            while True:
+                try:
+                    position = pg.locateOnScreen(exit_image_path, grayscale=True, confidence=0.9)
+                    
+                    if position is not None:
+                        point = pg.center(position)
+                        print(f'Image found at: {point}')
+                        pg.click(point)
+                        print(f'Clicked on image at: {point}')
+                        break
+                    else:
+                        print(f'Image not found: {exit_image_path}. Retrying...')
+                        time.sleep(1)
+                except Exception as e:
+                    print(f'An error occurred: {e}')
+                    time.sleep(1)
+            time.sleep(1)
+            # 最后点击 360_exit2.png
+            eexit_image_path = image_paths['eexit']
+            print(f'Checking image path: {eexit_image_path}')
+            while True:
+                try:
+                    position = pg.locateOnScreen(eexit_image_path, grayscale=True, confidence=0.9)
+                    
+                    if position is not None:
+                        point = pg.center(position)
+                        print(f'Image found at: {point}')
+                        pg.click(point)
+                        print(f'Clicked on image at: {point}')
+                        break
+                    else:
+                        print(f'Image not found: {eexit_image_path}. Retrying...')
+                        time.sleep(1)
+                except Exception as e:
+                    print(f'An error occurred: {e}')
+                    time.sleep(1)
+            # 最后点击 360_always_always_exit.png
+            eeexit_image_path = image_paths['eeexit']
+            print(f'Checking image path: {eeexit_image_path}')
+            while True:
+                try:
+                    position = pg.locateOnScreen(eeexit_image_path, grayscale=True, confidence=0.9)
+                    
+                    if position is not None:
+                        point = pg.center(position)
+                        print(f'Image found at: {point}')
+                        pg.click(point)
+                        print(f'Clicked on image at: {point}')
+                        break
+                    else:
+                        print(f'Image not found: {eeexit_image_path}. Retrying...')
+                        time.sleep(1)
+                except Exception as e:
+                    print(f'An error occurred: {e}')
+                    time.sleep(1)
+
+
+elif current_version =="Windows Server 2012":
+            # 先点击 win10black.png
+            win10black = image_paths['win2012']
+            print(f'Checking image path: {win10black}')
+            while True:
+                try:
+                    position = pg.locateOnScreen(win10black, grayscale=True, confidence=0.9)
+                    
+                    if position is not None:
+                        point = pg.center(position)
+                        print(f'Image found at: {point}')
+                        pg.click(point)
+                        print(f'Clicked on image at: {point}')
+                        break
+                    else:
+                        print(f'Image not found: {win10black}. Retrying...')
+                        time.sleep(1)
+                except Exception as e:
+                    print(f'An error occurred: {e}')
+                    time.sleep(1)
+            time.sleep(1)
+
+            # 再点击 360_img.png 并进行右键点击
+            hh_image_path = image_paths['hh']
+            print(f'Checking image path: {hh_image_path}')
+            while True:
+                try:
+                    position = pg.locateOnScreen(hh_image_path, grayscale=True, confidence=0.9)
+                    
+                    if position is not None:
+                        point = pg.center(position)
+                        print(f'Image found at: {point}')
+                        pg.rightClick(point)
+                        print(f'Right-clicked on image at: {point}')
+                        break
+                    else:
+                        print(f'Image not found: {hh_image_path}. Retrying...')
+                        time.sleep(1)
+                except Exception as e:
+                    print(f'An error occurred: {e}')
+                    time.sleep(1)
+            time.sleep(1)
+
+            # 点击 360_exit.png
+            exit_image_path = image_paths['exit']
+            print(f'Checking image path: {exit_image_path}')
+            while True:
+                try:
+                    position = pg.locateOnScreen(exit_image_path, grayscale=True, confidence=0.9)
+                    
+                    if position is not None:
+                        point = pg.center(position)
+                        print(f'Image found at: {point}')
+                        pg.click(point)
+                        print(f'Clicked on image at: {point}')
+                        break
+                    else:
+                        print(f'Image not found: {exit_image_path}. Retrying...')
+                        time.sleep(1)
+                except Exception as e:
+                    print(f'An error occurred: {e}')
+                    time.sleep(1)
+            time.sleep(1)
+            # 最后点击 360_exit2.png
+            eexit_image_path = image_paths['eexit']
+            print(f'Checking image path: {eexit_image_path}')
+            while True:
+                try:
+                    position = pg.locateOnScreen(eexit_image_path, grayscale=True, confidence=0.9)
+                    
+                    if position is not None:
+                        point = pg.center(position)
+                        print(f'Image found at: {point}')
+                        pg.click(point)
+                        print(f'Clicked on image at: {point}')
+                        break
+                    else:
+                        print(f'Image not found: {eexit_image_path}. Retrying...')
+                        time.sleep(1)
+                except Exception as e:
+                    print(f'An error occurred: {e}')
+                    time.sleep(1)
+            # 最后点击 360_always_always_exit.png
+            eeexit_image_path = image_paths['eeexit']
+            print(f'Checking image path: {eeexit_image_path}')
+            while True:
+                try:
+                    position = pg.locateOnScreen(eeexit_image_path, grayscale=True, confidence=0.9)
+                    
+                    if position is not None:
+                        point = pg.center(position)
+                        print(f'Image found at: {point}')
+                        pg.click(point)
+                        print(f'Clicked on image at: {point}')
+                        break
+                    else:
+                        print(f'Image not found: {eeexit_image_path}. Retrying...')
+                        time.sleep(1)
+                except Exception as e:
+                    print(f'An error occurred: {e}')
+                    time.sleep(1)
+
+
+elif current_version =="Windows 11":
+            # 先点击 win10black.png
+            win10black = image_paths['win11white']
+            print(f'Checking image path: {win10black}')
+            while True:
+                try:
+                    position = pg.locateOnScreen(win10black, grayscale=True, confidence=0.9)
+                    
+                    if position is not None:
+                        point = pg.center(position)
+                        print(f'Image found at: {point}')
+                        pg.click(point)
+                        print(f'Clicked on image at: {point}')
+                        break
+                    else:
+                        print(f'Image not found: {win10black}. Retrying...')
+                        time.sleep(1)
+                except Exception as e:
+                    print(f'An error occurred: {e}')
+                    time.sleep(1)
+            time.sleep(1)
+
+            # 再点击 360_img.png 并进行右键点击
+            hh_image_path = image_paths['hh']
+            print(f'Checking image path: {hh_image_path}')
+            while True:
+                try:
+                    position = pg.locateOnScreen(hh_image_path, grayscale=True, confidence=0.9)
+                    
+                    if position is not None:
+                        point = pg.center(position)
+                        print(f'Image found at: {point}')
+                        pg.rightClick(point)
+                        print(f'Right-clicked on image at: {point}')
+                        break
+                    else:
+                        print(f'Image not found: {hh_image_path}. Retrying...')
+                        time.sleep(1)
+                except Exception as e:
+                    print(f'An error occurred: {e}')
+                    time.sleep(1)
+            time.sleep(1)
+
+            # 点击 360_exit.png
+            exit_image_path = image_paths['exit']
+            print(f'Checking image path: {exit_image_path}')
+            while True:
+                try:
+                    position = pg.locateOnScreen(exit_image_path, grayscale=True, confidence=0.9)
+                    
+                    if position is not None:
+                        point = pg.center(position)
+                        print(f'Image found at: {point}')
+                        pg.click(point)
+                        print(f'Clicked on image at: {point}')
+                        break
+                    else:
+                        print(f'Image not found: {exit_image_path}. Retrying...')
+                        time.sleep(1)
+                except Exception as e:
+                    print(f'An error occurred: {e}')
+                    time.sleep(1)
+            time.sleep(1)
+            # 最后点击 360_exit2.png
+            eexit_image_path = image_paths['eexit']
+            print(f'Checking image path: {eexit_image_path}')
+            while True:
+                try:
+                    position = pg.locateOnScreen(eexit_image_path, grayscale=True, confidence=0.9)
+                    
+                    if position is not None:
+                        point = pg.center(position)
+                        print(f'Image found at: {point}')
+                        pg.click(point)
+                        print(f'Clicked on image at: {point}')
+                        break
+                    else:
+                        print(f'Image not found: {eexit_image_path}. Retrying...')
+                        time.sleep(1)
+                except Exception as e:
+                    print(f'An error occurred: {e}')
+                    time.sleep(1)
+            # 最后点击 360_always_always_exit.png
+            eeexit_image_path = image_paths['eeexit']
+            print(f'Checking image path: {eeexit_image_path}')
+            while True:
+                try:
+                    position = pg.locateOnScreen(eeexit_image_path, grayscale=True, confidence=0.9)
+                    
+                    if position is not None:
+                        point = pg.center(position)
+                        print(f'Image found at: {point}')
+                        pg.click(point)
+                        print(f'Clicked on image at: {point}')
+                        break
+                    else:
+                        print(f'Image not found: {eeexit_image_path}. Retrying...')
+                        time.sleep(1)
+                except Exception as e:
+                    print(f'An error occurred: {e}')
+                    time.sleep(1)
