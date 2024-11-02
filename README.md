@@ -1,9 +1,7 @@
 ---
 title: README
-category: 关于开发的....
 updatedAt: 2024-11-02T14:37:33.601Z
 createdAt: 2024-11-02T14:28:44.687Z
-hidden: true
 ---
 
 # ClosedAV
